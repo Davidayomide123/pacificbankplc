@@ -1,0 +1,435 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style_page.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet">
+
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '60bcd766b3d111d8981d2933c94e036c631cdb4e';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+
+    <title>Pacific Union</title>
+  </head>
+  <body>
+ <header id="nav-menu" aria-label="navigation bar">
+      <div class="container">
+        <div class="nav-start">
+      <p class="logo">Pacific <span class="log">Union</span></p>
+          </a>
+          <nav class="menu">
+            <ul class="menu-bar">
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown1"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="browse"
+                >
+                  Browse
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown1" class="dropdown">
+                  <ul role="menu">
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#best-of-the-day">
+                        <img src="./assets/icons/botd.svg" class="icon" />
+                        <div>
+                          <span class="dropdown-link-title"
+                            >Best of the day</span
+                          >
+                          <p>Shorts featured today by curators</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#featured-streams">
+                        <img src="./assets/icons/fs.svg" class="icon" />
+                        <div>
+                          <span class="dropdown-link-title"
+                            >Featured Streams</span
+                          >
+                          <p>Leading creatives livestreams</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#subscriptions">
+                        <img src="./assets/icons/sp.svg" class="icon" />
+                        <div>
+                          <span class="dropdown-link-title">Subscriptions</span>
+                          <p>Gain exclusive access</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#creative-feed">
+                        <img src="./assets/icons/cf.svg" class="icon" />
+                        <div>
+                          <span class="dropdown-link-title">Creative Feed</span>
+                          <p>See trending creations</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <ul role="menu">
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Browse by apps</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#adobe-xd">
+                        <img src="./assets/icons/xd.svg" />
+                        Adobe XD
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#after-effect">
+                        <img src="./assets/icons/ae.svg" />
+                        After Effect
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#sketch">
+                        <img src="./assets/icons/sketch.svg" />
+                        Sketch
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#indesign">
+                        <img src="./assets/icons/indesign.svg" />
+                        Indesign
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#figma">
+                        <img src="./assets/icons/figma.svg" />
+                        Figma
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown2"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="discover"
+                >
+                  Discover
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown2" class="dropdown">
+                  <ul role="menu">
+                    <li>
+                      <span class="dropdown-link-title">Browse Categories</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#branding">Branding</a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="{% url 'index_page' %}"
+                        >Pacific Bank Funds Tracking Link</a
+                      >
+                    </li>
+                  </ul>
+                  <ul role="menu">
+                    <li>
+                      <span class="dropdown-link-title">Download App</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#mac-windows"
+                        >MacOS & Windows</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="#linux">Linux</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a class="nav-link" href="/">Jobs</a></li>
+              <li><a class="nav-link" href="/">Livestream</a></li>
+              <li><a class="nav-link" href="{% url 'LogoutPage' %}">Log Out</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nav-end">
+          <div class="right-container">
+            <form class="search" role="search">
+              <input type="search" name="search" placeholder="Search" />
+              <i class="bx bx-search" aria-hidden="true"></i>
+            </form>
+
+            <a href="#profile">
+              <img
+                src="{% static 'images/images.jpg' %}"
+                width="30"
+                height="30"
+                alt="user image"
+              />
+            </a>
+            <button class="btn btn-primary">Create</button>
+          </div>
+
+          <button
+            id="hamburger"
+            aria-label="hamburger"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="bx bx-menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+
+
+  <div class="content">
+    <div class="dashboard">
+      <h1>Welcome
+        <br>{{request.user}}</h1>
+<br/><br/>
+      <div class="dashboard_n">
+        <div class="account">
+         <h2>Account Balance</h2><p>${{ balance }}</p>
+        </div>
+        </div>
+      <div class="account-summary">
+        <h2>Payment Options</h2>
+
+       <div class="payment_options">
+        <br>
+        <div class="first_tab">
+          <a href="{% url 'Bank_transfer' %}" class="a">
+            <img class="img" src="{% static 'images/bank_transfer.png' %}" alt="">
+            <span class="little">Bank Transfer</span>
+          </a>
+          <a href="{% url 'crypto_page' %}" class="a">
+            <img class="img" src="{% static 'images/bitcoin.jpg' %}" alt="">
+            <span class="little">Crypto Pay</span>
+          </a>
+          <a href="{% url 'PayPal' %}" class="a">
+            <img class="img" src="{% static 'images/download.png' %}" alt="">
+            <span class="little">Paypal</span>
+          </a>
+         <a href="{% url 'skrill' %}" class="a">
+          <img class="img" src="{% static 'images/skrill.jpg' %}" alt="">
+          <span class="little">Skrill</span>
+         </a>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="first_tab">
+       <a href="{% url 'trust_wise' %}" class="a">
+        <img class="img" src="{% static 'images/trust_wise.jpg' %}" alt="">
+        <span class="little">Trust wise</span>
+       </a>
+       <a href="{% url 'Google_pay' %}" class="a">
+        <img class="img" src="{% static 'images/pay.jpg' %}" alt="">
+        <span class="little">Google pay</span>
+       </a>
+        <a href="{% url 'western' %}" class="a">
+          <img class="img" src="{% static 'images/western_union.png' %}" alt="">
+          <span class="little">Western Union</span>
+        </a>
+        <a href="{% url 'Payoneer' %}" class="a">
+          <img class="img" src="{% static 'images/payoneer.png' %}" alt="">
+          <span class="little">Payoneer</span>
+        </a>
+        </div>
+        <br>
+       </div>
+
+        <p>Available Balance: ${{ balance }}</p>
+      </div>
+      <div class="transaction-history">
+        <a href="">Transaction History</a>
+        <!--<table>-->
+        <!--  <thead>-->
+        <!--    <tr>-->
+        <!--      <th>Date</th>-->
+        <!--      <th>Description</th>-->
+        <!--      <th>Amount</th>-->
+        <!--    </tr>-->
+        <!--  </thead>-->
+        <!--  <tbody>-->
+        <!--    <tr>-->
+        <!--      <td>2024-05-01</td>-->
+        <!--      <td>Payment received</td>-->
+        <!--      <td>$500</td>-->
+        <!--    </tr>-->
+
+        <!--  </tbody>-->
+        <!--</table>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="balance-card">
+    <div class="balance-card-header">
+      <h2 class="h1">Total Balance</h2>
+    </div>
+    <div class="balance-card-body">
+      <h3><span class="sign">$</span><span id="balance_id">{{ balance }}</span></h3>
+    </div>
+  </div>
+<br><br>
+  <div class="balance-card">
+    <div class="balance-card-header">
+      <h2 class="h1">Redemable Credit</h2>
+    </div>
+    <div class="balance-card-body">
+        <h3><span class="sign">$</span><span id="balance">0.00</span></h3>
+    </div>
+  </div>
+  <br><br><br>
+
+<nav class="navbar">
+    <a class="a" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+    Home
+    </a>
+
+    <a class="a" href="{% url 'withdraw' %}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"/></svg>
+    Withdrwal
+    </a>
+
+    <a class="a" href="{% url 'analytics' %}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"/></svg>
+    Analytics
+    </a>
+
+    <a class="a" href="{% url 'deposit' %}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+    Deposit
+    </a>
+  </nav>
+  <div class="telegram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </div>
+
+  <script type="text/javascript" charset="utf-8">
+const sidebar = document.getElementById('sidebar');
+const content = document.getElementById('content');
+
+function toggleSidebar() {
+  sidebar.classList.toggle('active');
+  content.classList.toggle('active');
+}
+
+
+// Function to update the account balance
+function updateBalance(amount) {
+  const balanceElement = document.getElementById('balance');
+  const currentBalance = parseFloat(balanceElement.innerText);
+  const increment = amount / 0; // Increment in each step
+  let counter = 0;
+
+  // Function to animate balance update
+  function animate() {
+    if (counter >= amount) {
+      clearInterval(animation);
+      return;
+    }
+
+    const newBalance = currentBalance + counter;
+    balanceElement.innerText = newBalance.toFixed(0);
+    counter += increment;
+  }
+
+  // Start the animation
+  const animation = setInterval(animate, 0);
+}
+
+// Example usage: update balance to $500
+updateBalance(0);
+
+
+// script.js
+const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+const dropdown = document.querySelectorAll(".dropdown");
+const hamburgerBtn = document.getElementById("hamburger");
+const navMenu = document.querySelector(".menu");
+const links = document.querySelectorAll(".dropdown a");
+
+function setAriaExpandedFalse() {
+  dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+}
+
+function closeDropdownMenu() {
+  dropdown.forEach((drop) => {
+    drop.classList.remove("active");
+    drop.addEventListener("click", (e) => e.stopPropagation());
+  });
+}
+
+function toggleHamburger() {
+  navMenu.classList.toggle("show");
+}
+
+dropdownBtn.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    const dropdownIndex = e.currentTarget.dataset.dropdown;
+    const dropdownElement = document.getElementById(dropdownIndex);
+
+    dropdownElement.classList.toggle("active");
+    dropdown.forEach((drop) => {
+      if (drop.id !== btn.dataset["dropdown"]) {
+        drop.classList.remove("active");
+      }
+    });
+    e.stopPropagation();
+    btn.setAttribute(
+      "aria-expanded",
+      btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+    );
+  });
+});
+
+// close dropdown menu when the dropdown links are clicked
+links.forEach((link) =>
+  link.addEventListener("click", () => {
+    closeDropdownMenu();
+    setAriaExpandedFalse();
+    toggleHamburger();
+  })
+);
+
+// close dropdown menu when you click on the document body
+document.documentElement.addEventListener("click", () => {
+  closeDropdownMenu();
+  setAriaExpandedFalse();
+});
+
+// close dropdown when the escape key is pressed
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeDropdownMenu();
+    setAriaExpandedFalse();
+  }
+});
+
+hamburgerBtn.addEventListener("click", toggleHamburger);
+document.querySelector('.telegram-icon').addEventListener('click', function() {
+    window.open('https://t.me/PACIFIC_UNION_BANKING1', '_blank');
+});
+  </script>
+  </body>
+</html>

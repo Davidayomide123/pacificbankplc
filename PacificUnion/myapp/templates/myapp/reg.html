@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style type="text/css" media="all">
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.messages {
+  background-color: #007bff;
+  color: red;
+  font-style:none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.messages:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  background-color: #007bff;
+}
+
+ .remember-forgot{
+        font-size: .9rem;
+        color: floralwhite;
+        font-weight: 500;
+        margin: -15px 0 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .remember-forgot label input{
+        accent-color: #fff;
+        margin-right: 3px;
+    }
+
+    .remember-forgot a{
+        color: floralwhite;
+        text-decoration: none;
+    }
+
+    .remember-forgot a:hover{
+        text-decoration: underline;
+    }
+
+
+.signup-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #0056b3;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+label{
+    color:#fff;
+}
+
+h2 {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ccc;
+}
+
+input::placeholder{
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+option,
+select,
+input[type="file"],
+button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+      .form-container {
+        width: 300px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group label {
+        display: block;
+    }
+
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form method="post" action="" class="signup-form">
+        {% csrf_token %}
+      <h2>Sign Up</h2>
+      <label for="">Username</label>
+      {{form.username}}
+
+    <label for="">Email</label>
+      {{form.email}}
+
+     <label for="">First name</label>
+      {{form.firstname}}
+
+     <label for="">Last name</label>
+      {{form.lastname}}
+
+     <label for="">Password</label>
+      {{form.password1}}
+
+    <label for="">Confirm Password</label>
+      {{form.password2}}
+
+ <div id="myForm">
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="countrySelect" name="country">
+                <!-- Options will be populated dynamically using JavaScript -->
+            </select>
+        </div>
+    </div>
+
+    <label for="">Gender</label>
+      {{form.gender}}
+
+    <label for="">Status</label>
+      {{form.status}}
+
+    <label for="">Account Type</label>
+      {{form.account_type}}
+
+    <label for="">Currency</label>
+      {{form.currency}}
+
+    <label for="">Telephone Number</label>
+      {{form.phonenumber}}
+      <br><br>
+<div class="remember-forgot">
+    <label for=""><input required type="checkbox"> Remember me</label>
+    <a href="{% url 'login' %}">Already have an account?</a>
+</div>
+      <button type="submit">Sign Up</button>
+<br>
+      <div class="messages">
+      {{form.errors}}
+</div>
+    </form>
+  </div>
+  <script>
+
+    // Array of country names
+    var countries = [
+        "Country", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
+        "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia",
+        "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Côte d'Ivoire", "Cabo Verde",
+        "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)",
+        "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)", "Democratic Republic of the Congo", "Denmark", "Djibouti",
+        "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (fmr. 'Swaziland')",
+        "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
+        "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland",
+        "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon",
+        "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali",
+        "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco",
+        "Mozambique", "Myanmar (formerly Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria",
+        "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay",
+        "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia",
+        "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles",
+        "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan",
+        "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste",
+        "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates",
+        "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+    ];
+
+    // Function to populate the select element with country options
+    function populateCountries() {
+        var select = document.getElementById("countrySelect");
+
+        for (var i = 0; i < countries.length; i++) {
+            var option = document.createElement("option");
+            option.text = countries[i];
+            option.value = countries[i];
+            select.appendChild(option);
+        }
+    }
+
+    // Call the function to populate the select element
+    populateCountries();
+
+    // Function to handle form submission
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        var selectedCountry = document.getElementById("countrySelect").value;
+        alert("You selected: " + selectedCountry);
+        // Here you can perform further actions like submitting the form data via AJAX, etc.
+    });
+
+</script>
+</body>
+</html>

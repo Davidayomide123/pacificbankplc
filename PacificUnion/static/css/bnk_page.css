@@ -1,0 +1,104 @@
+header {
+  background-color: navy;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: navy;
+  }
+
+.paypal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paypal-header i {
+  margin-right: 10px;
+}
+
+.paypal-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 12px;
+  background-color: #0079c1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.telegram-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.telegram-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+button:hover {
+  background-color: #005580;
+}

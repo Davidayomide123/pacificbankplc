@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style type="text/css" media="all">
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #007bff;
+}
+
+ .remember-forgot{
+        font-size: .9rem;
+        color: floralwhite;
+        font-weight: 500;
+        margin: -15px 0 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .remember-forgot label input{
+        accent-color: #fff;
+        margin-right: 3px;
+    }
+
+    .remember-forgot a{
+        color: floralwhite;
+        text-decoration: none;
+    }
+
+    .remember-forgot a:hover{
+        text-decoration: underline;
+    }
+
+
+.signup-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #0056b3;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ccc;
+}
+
+input::placeholder{
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.messages {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.messages:hover {
+  background-color: #0056b3;
+}
+
+.a{
+    text-decoration:none;
+    color:#fff;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="" method="post" class="signup-form">
+        {% csrf_token %}
+      <h2>Sign In</h2>
+      <input type="text" placeholder="Enter Unique Username" name='username' required>
+      <input type="password" placeholder="Confirm Password" name='password' required>
+<br><br>
+<div class="remember-forgot">
+    <label for=""><input required type="checkbox"> Remember me</label>
+    <a href="">Forgot Password?</a>
+</div>
+      <button type="submit">Sign In</button>
+
+      <a class="a" href="{% url 'reg' %}">dont have an account sign up...</a>
+      <br>
+    {% for message in messages %}
+      <div class="messages">
+            {{message}}
+      </div>
+    {% endfor %}
+    </form>
+  </div>
+
+  <script>
+  function togglePassword(inputId) {
+    var passwordInput = document.getElementById(inputId);
+    var passwordToggle = document.querySelector('.password-toggle');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      passwordToggle.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+    } else {
+      passwordInput.type = 'password';
+      passwordToggle.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+    }
+  }
+</script>
+</body>
+</html>

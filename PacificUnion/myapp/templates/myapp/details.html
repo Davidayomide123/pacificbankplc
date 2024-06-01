@@ -1,0 +1,488 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific union bank</title>
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '60bcd766b3d111d8981d2933c94e036c631cdb4e';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+    <style>
+     *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 2s linear;
+}
+
+body::before {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    content: '';
+    /* background-image: url('static/images/download.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+  }
+
+  body{
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #fff;
+}
+
+.text{
+    font-size: x-large;
+    text-decoration: none;
+    color: navy;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+input::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+input{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid navy;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: 10px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: navy;
+    border: 2px solid navy;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.test{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1rem;
+}
+
+.act{
+    font-weight: bolder;
+    color: black;
+}
+
+.loading{
+    font-weight: bold;
+    color: navy;
+}
+
+.cunts{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid grey;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+section{
+    background-color: #fff;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+
+.trace_in{
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trace{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+img{
+    height: 3rem;
+    border-radius: 3rem;
+}
+
+.send{
+    font-size: 13px;
+}
+
+.mtd_inner{
+    font-weight: bold;
+    color: navy;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid grey;
+}
+
+.upd, .det{
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.sta{
+    margin: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.status{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    color: navy;
+}
+
+.sta_2{
+    margin: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.major{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width:900px){
+section{
+    height: auto;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 2s linear;
+}
+
+.container{
+    justify-content: space-around;
+}
+}
+
+.button{
+    position: relative;
+    padding: 8px 8px;
+    background: navy;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:active{
+    background-color: navy;
+}
+
+.button__text{
+    font: bold 20px 'Quicksand', san-serif;
+    color: #ffffffff;
+    transition: all 0.2s;
+}
+
+.button--loading .button__text{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.button--loading::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease-in-out infinite;
+}
+
+@keyframes button-loading-spinner {
+    from{
+        transform: rotate(0turn);
+    }
+
+     to {
+        transform: rotate(1turn);
+    }
+}
+.telegram-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.telegram-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div class="telegram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </div>
+    <div class="navbar">
+        <a href="{% url 'home' %}" class="text">
+            Pacific Union <br> Bank TKL
+        </a>
+
+        <div></div>
+
+        <div class="icon">
+       <a href="http://thepacificbank0com.pythonanywhere.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform:msFilter;"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg></a>
+    </div>
+
+    </div>
+
+    <div class="container">
+        <div class="test">
+            <span class="act">All activity</span>
+            <br><br>
+            <span class="loading">In progress</span>
+        </div>
+    </div>
+
+    <section>
+
+    <div class="cunts">
+
+           <div></div>
+
+           <button class="button button--loading" onclick="this.classList.toggle('button--loading')">
+            <span class="button__text">Check Payment Status</span>
+          </button>
+
+          <div>
+            <img src="{{object.image.url}}" alt="{{object.senders_bank}}">
+          </div>
+
+    </div>
+
+    <div class="nav">
+        <a href="" class="upd">Updates</a>
+        <a href="" class="det">Details</a>
+        <div class="icon_sec">
+        <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></a>
+            <a href=""> <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></a>
+        </div>
+    </div>
+
+<div class="major">
+<div class="left">
+        <p class="sta">
+            <span class="status">Status Update:</span>
+            {% for i in form %}
+              {{i.status_text}}
+            {% endfor %}
+        </p>
+
+        <p class="sta">
+
+        <span class="status">Estimated Delivery time:</span>  {% for i in form %}
+        {{i.estimated_delivery_time}}
+      {% endfor %}
+        </p>
+</div>
+
+<div class="center">
+    <div class="sta">
+        <span class="status">Transaction:</span><br>
+        {% for i in form %}
+        {{i.transaction}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Sender's name:</span><br>
+        {{request.user}}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Senders country:</span><br>
+        {% for i in form %}
+        {{i.senders_country}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Recipents name:</span><br>
+        {% for i in form %}
+        {{i.recipent_name}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Recipents country:</span><br>
+        {% for i in form %}
+        {{i.recipent_country}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Senders bank:</span><br>
+        {% for i in form %}
+        {{i.senders_bank}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Recipents bank:</span><br>
+        {% for i in form %}
+        {{i.recipent_bank}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Transfer amount:</span><br>
+        {% for i in form %}
+        {{i.Total_Transfer_Amount}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Transfer date:</span><br>
+        {% for i in form %}
+        {{i.current_date}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Status update:</span><br>
+        {% for i in form %}
+        {{i.status_update}}
+      {% endfor %}
+    </div>
+
+    <div class="sta_2">
+        <span class="status">Recipents IBAN:</span><br>
+        {% for i in form %}
+        {{i.Recipients_IBAN}}
+      {% endfor %}
+    </div>
+</div>
+
+<div class="right">
+
+</div>
+    </div>
+    </section>
+
+    <script>
+        const btn = document.querySelector(".button");
+
+        btn.classList.add("button--loading")
+        btn.classList.remove("button--loading")
+         document.querySelector('.telegram-icon').addEventListener('click', function() {
+    window.open('https://t.me/PACIFIC_UNION_BANKING1', '_blank');
+});
+
+    </script>
+</body>
+</html>

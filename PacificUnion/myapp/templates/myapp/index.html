@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Union</title>
+    <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="32x32" href="../assets/fov.jpg">
+    <!-- css style -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/index_page.css' %}">
+     <!-- Remix icons -->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="../../admin/assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" >
+      $(document).ready(function() {
+    $(".testimonial").first().addClass("active");
+    setInterval(function() {
+      var currentTestimonial = $(".testimonial.active");
+      var nextTestimonial = currentTestimonial.next(".testimonial");
+      if (nextTestimonial.length === 0) {
+        nextTestimonial = $(".testimonial").first();
+      }
+      currentTestimonial.removeClass("active");
+      nextTestimonial.addClass("active");
+    }, 500); // Change testimonial every 5 seconds (adjust as needed)
+  });
+
+
+  </script>
+
+  <script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '60bcd766b3d111d8981d2933c94e036c631cdb4e';
+window.smartsupp||(function(d) {
+	var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	c.type='text/javascript';c.charset='utf-8';c.async=true;
+	c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+</head>
+<body>
+<div class="telegram-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </div>
+    <header>
+        <a href="" class="logo"><p>PACIFIC UNION BANK</p></a>
+
+        <ul class="navbar">
+            <li><a href="" class="active" >Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Profit Post</a></li>
+            <li><a href="">Adver Post</a></li>
+            <li><a href="">Contact Us</a></li>
+            <div class="sub_menu_show">
+                <a href="">How It Works</a>
+                <a href="" >Get Code</a>
+                <a href="">Verify Code</a>
+                <a href="">Top Earners</a>
+            </div>
+            <div class="list-more-items">
+                <li>
+                    <label for="" class="drop" >Other links
+                        <span class="fas fa-caret-down" ></span>
+                    </label>
+                    <div class="sub_menu">
+                        <a href="">How It Works</a>
+                        <a href="" >Get Code</a>
+                        <a href="">Verify Code</a>
+                        <a href="">Top Earners</a>
+                    </div>
+                </li>
+            </div>
+            <a class="sign-up1" href="{% url 'reg' %}">Sign Up</a>
+        </ul>
+
+
+        <div class="main">
+            <a class="sign-up" href="{% url 'reg' %}">Sign Up</a>
+            <div class="bx bx-menu" id="menu_icon"></div>
+        </div>
+    </header>
+
+
+    <div class="contain_top">
+        <h3>FUEL YOUR AMBITION <br> WITH <span>PACIFIC UNION BANK</span></h3>
+        <p class="what-is">Secure, Seamless, and just a click away managing your finances<br> made easy with our online banking system</p>
+        <a href="{% url 'reg' %}" class="sign-up-now-btn">
+       <h4>SIGN UP</h4>
+    </a>
+<br>
+<img src="{% static 'images/online.jpg' %}" alt="">
+
+    </div>
+
+            <h3 class="why">WHY YOU SHOULD CHOOSE <br><span>PACIFIC UNION</span></h3>
+    <div class="featu">
+
+        <div class="feature_box_1">
+            <div class="ic">
+                <i class="ri-secure-payment-fill"></i>
+            </div>
+            <h3 style="color: #fff;">Secure Transactions</h3>
+            <p style="color: #fff">We ensure the safety of our users, preventing lose of assets in any form, these is one major responsibility.</p>
+        </div>
+
+        <div class="feature_box_2">
+            <div class="ic">
+                <i class="ri-refund-2-fill"></i>
+            </div>
+            <h3 style="color: #fff">Top Earning feature</h3>
+            <p style="color: #fff">Our platform is optimized for stability and speed, ensuring uninterrupted service and efficient operation</p>
+        </div>
+
+        <div class="feature_box_3">
+            <div class="ic">
+                <i class="ri-macbook-line"></i>
+            </div>
+            <h3 style="color: #fff">easy to use</h3>
+            <p style="color: #fff">We provides easy-to-us experices for our user. We completly automated every process to enable an easy use.</p>
+        </div>
+
+        <div class="feature_box_4">
+            <div class="ic">
+                <i class="ri-global-line"></i>
+            </div>
+            <h3 style="color: #fff">global operation</h3>
+            <p style="color: #fff">Profitforge operates across Africa, any one in Africa can be a member of Profitforge and enjoy exciting features. </p>
+        </div>
+    </div>
+
+
+
+
+    <!--
+        SLIDE SHOW
+    -->
+
+    <div class="testimonial-slideshow">
+        <div class="testimonial active">
+            <div class="profile-picture">
+                <img src="{% static 'images/male.jpg' %}" alt="Profile Picture">
+                <div class="profile-info">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+          <span class="author">- John Doe</span>
+        </div>
+
+        <div class="testimonial">
+            <div class="profile-picture">
+                <img src="{% static 'images/old_male.jpg' %}" alt="Profile Picture">
+                <div class="profile-info">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+          <p>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          <span class="author">- Noah Johnson</span>
+        </div>
+        <!-- Add more testimonials here -->
+      </div>
+
+
+      <div class="testimonial-container">
+        <div class="testimonial">
+            <div class="profile-picture">
+                <img src="{% static 'images/females.jpg' %}" alt="Profile Picture">
+                <div class="profile-info">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+          <p class="quote">"The service was excellent! I highly recommend it."</p>
+          <p class="author">- Marry Love</p>
+        </div>
+
+        <div class="testimonial">
+            <div class="profile-picture">
+                <img src="{% static 'images/old_females.jpg' %}" alt="Profile Picture">
+                <div class="profile-info">
+                  <h3>John Doe</h3>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+          <p class="quote">"Amazing experience! Will definitely use it again."</p>
+          <p class="author">- Jane Smith</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+
+
+
+
+
+
+<!--footer section -->
+<footer class="footer section">
+
+    <div class="footer-container container d-grid">
+
+        <div class="company-data">
+
+            <a href="index">
+                <img src="{% static 'images/images.jpg' %}" alt="logo" style="height:8rem;">
+            </a>
+            <p class="company-description"> Connecting Many To <br> The World While Earning</p>
+
+            <ul class="list social-media">
+                <li class="list-item">
+                    <a href="" class="list-lin"><i class="ri-instagram-line"></i></a>
+                </li>
+                <li class="list-item">
+                    <a href="" class="list-lin"><i class="ri-facebook-circle-line"></i></a>
+                </li>
+                <li class="list-item">
+                    <a href="www.twitter.com" class="list-lin"><i class="ri-twitter-line"></i></a>
+                </li>
+                <li class="list-item">
+                    <a href="www.pinterest.com" class="list-lin"><i class="ri-pinterest-line"></i></a>
+                </li>
+            </ul>
+
+            <span class="copyright-notice">&copy;2024 Pacific union. All rights reserved.</span>
+        </div>
+
+          <div>
+            <h6 class="titl footer-title">About</h6>
+
+            <ul class="footer-list list">
+                <li class="list-item">
+                    <a href="{% url 'reg' %}" class="list-lin">Terms and <br>Conditions</a>
+                </li>
+                <li class="list-item">
+                    <a href="{% url 'reg' %}" class="list-lin">Privacy</a>
+                </li>
+                <li class="list-item">
+                    <a href="{% url 'reg' %}" class="list-lin">Contact Us</a>
+                </li>
+            </ul>
+
+          </div>
+
+        <div>
+            <h6 class="titl footer-title">Resources</h6>
+
+            <ul class="footer-list list">
+                <li class="">
+                    <a href="{% url 'reg' %}" class="list-lin">Top Earners</a>
+                </li>
+
+                <li class="list-item">
+                    <a href="{% url 'reg' %}" class="list-lin">Get Code</a>
+                </li>
+                <li class="list-item">
+                    <a href="{% url 'reg' %}" class="list-lin">Check Code</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </footer>
+
+<script type="text/javascript" charset="utf-8">
+ document.querySelector('.telegram-icon').addEventListener('click', function() {
+    window.open('https://t.me/PACIFIC_UNION_BANKING1', '_blank');
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var testimonials = document.querySelectorAll('.testimonial');
+  var currentTestimonial = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach(function(testimonial) {
+      testimonial.classList.remove('active');
+    });
+    testimonials[index].classList.add('active');
+  }
+
+  function nextTestimonial() {
+    currentTestimonial++;
+    if (currentTestimonial >= testimonials.length) {
+      currentTestimonial = 0;
+    }
+    showTestimonial(currentTestimonial);
+  }
+
+  // Switch testimonials every 5 seconds (5000 milliseconds)
+  setInterval(nextTestimonial, 5000);
+});
+
+
+function toggleMenu() {
+  var navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}
+
+
+  </script>
+
+</body>
+</html>
